@@ -1,0 +1,17 @@
+{
+  "name": "pfw_v2_newman_test",
+  "version": "1.0.0",
+  "description": "PFW API testing framework Newman",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node src/config/testConfig.ts"
+  },
+  "author": "PlayFundWin",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/newman": "^5.3.3",
+    "newman": "^5.3.2",
+    "typescript": "^5.0.4",
+    "winston": "^3.8.2"
+  }
+}

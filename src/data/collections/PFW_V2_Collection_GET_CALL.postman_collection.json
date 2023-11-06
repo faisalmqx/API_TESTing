@@ -1,0 +1,2272 @@
+{
+	"info": {
+		"_postman_id": "b20d506a-e97c-40f9-8ac3-12e0bbb40e2d",
+		"name": "PFW_V2_Collection_GET_CALL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24603434",
+		"_collection_link": "https://interstellar-shuttle-347602.postman.co/workspace/My-Workspace~84f2908f-4ad1-4be8-8cd2-38464541bc96/collection/24603434-b20d506a-e97c-40f9-8ac3-12e0bbb40e2d?action=share&source=collection_link&creator=24603434"
+	},
+	"item": [
+		{
+			"name": "StripeNonPRSubMigration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/988cd179-9ce1-4013-b5d8-c90ead73a495/subscription_migrate",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"988cd179-9ce1-4013-b5d8-c90ead73a495",
+						"subscription_migrate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubscriptionDBUpdate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/988cd179-9ce1-4013-b5d8-c90ead73a495/subscriptionDBUpdate",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"988cd179-9ce1-4013-b5d8-c90ead73a495",
+						"subscriptionDBUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubscriptionDateFix",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/988cd179-9ce1-4013-b5d8-c90ead73a495/dateFix",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"988cd179-9ce1-4013-b5d8-c90ead73a495",
+						"dateFix"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubscriptionDBPrune",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/988cd179-9ce1-4013-b5d8-c90ead73a495/subscription_prune",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"988cd179-9ce1-4013-b5d8-c90ead73a495",
+						"subscription_prune"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction Discrepancy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/transactions/data/discrepancy",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"data",
+						"discrepancy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProcessorStatement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/transactions/stripe/updateFuturePaymentsStatementDesc",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"stripe",
+						"updateFuturePaymentsStatementDesc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction Integrity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/transactions/data/integrity",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"data",
+						"integrity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Null PrizeCodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/prizes/b2726f95-ee7b-4291-9855-27a5f3f48bf7/prizecode/assign",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"prizes",
+						"b2726f95-ee7b-4291-9855-27a5f3f48bf7",
+						"prizecode",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Draw Entry Integrity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/entries/data/integrity",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"entries",
+						"data",
+						"integrity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const USER_DATA_SCHEMA = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"object\",\r",
+							"            properties: {\r",
+							"                contact: {\r",
+							"                    type: \"array\",\r",
+							"                    items: {\r",
+							"                        type: \"object\",\r",
+							"                        properties: {\r",
+							"                            id: { type: \"number\" },\r",
+							"                            userID: { type: \"string\" },\r",
+							"                            userFirstName: { type: \"string\" },\r",
+							"                            userRoleID:{ type: \"number\" },\r",
+							"                            userEmail:{ type:\"string\"}\r",
+							"                            // Add more properties as needed...\r",
+							"                        },\r",
+							"                        required: [\"id\", \"userID\", \"userFirstName\",\"userRoleID\",userEmail]\r",
+							"                    }\r",
+							"                }\r",
+							"            },\r",
+							"            required: [\"contact\"]\r",
+							"        }\r",
+							"    },\r",
+							"    required: [\"status\", \"content\"]\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Status code is 200 OK\", ()=>{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Contact array should have a length of 1 since UserID is unique for each user\", function () {\r",
+							"    pm.expect(pm.response.json().content.contact.length).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response should match the user data schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(USER_DATA_SCHEMA);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/4617acd4-c9d7-4d8d-94a0-b7582ffd5437/data",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4617acd4-c9d7-4d8d-94a0-b7582ffd5437",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Constants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/4617acd4-c9d7-4d8d-94a0-b7582ffd5437/data",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4617acd4-c9d7-4d8d-94a0-b7582ffd5437",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserDataByID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"// Define the expected schema\r",
+							"const schema = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"object\",\r",
+							"            properties: {\r",
+							"                contact: {\r",
+							"                    type: \"array\",\r",
+							"                    items: {\r",
+							"                        type: \"object\",\r",
+							"                        properties: {\r",
+							"                            id: { type: \"number\" },\r",
+							"                            userID: { type: \"string\" },\r",
+							"                            userFirstName: { type: \"string\" },\r",
+							"                            userSurname: { type: \"string\" },\r",
+							"                            userEmail: { type: \"string\" },\r",
+							"                            userPhoneNumber: { type: [\"null\", \"string\"] },\r",
+							"                            userPassword: { type: \"string\" },\r",
+							"                            userPasswordSalt: { type: [\"null\", \"string\"] },\r",
+							"                            userDateOfBirth: { type: \"string\" },\r",
+							"                            userAddressLine1: { type: \"string\" },\r",
+							"                            userAddressLine2: { type: \"string\" },\r",
+							"                            userAddressPostcode: { type: \"string\" },\r",
+							"                            userAddressCountryLocaleID: { type: \"number\" },\r",
+							"                            userDateJoined: { type: \"string\" },\r",
+							"                            userDateUpdated: { type: \"string\" },\r",
+							"                            userRoleID: { type: \"number\" },\r",
+							"                            userGender: { type: \"number\" },\r",
+							"                            userLanguageID: { type: \"number\" },\r",
+							"                            userLastLoggedIn: { type: \"string\" },\r",
+							"                            userAccountApproved: { type: \"number\" },\r",
+							"                            userProcessorCustomerID: { type: [\"null\", \"string\"] },\r",
+							"                            userDeleted: { type: \"number\" },\r",
+							"                            userDeletedDate: { type: [\"null\", \"string\"] },\r",
+							"                            userSelfExcluded: { type: \"number\" },\r",
+							"                            userSelfExcludedDate: { type: \"string\" },\r",
+							"                            userSelfExcludedExpiryDate: { type: \"string\" },\r",
+							"                            userPurchaseLimits: { type: \"number\" },\r",
+							"                            userOptInMarketingPFW: { type: \"number\" },\r",
+							"                            userOptInMarketingPartner: { type: \"number\" },\r",
+							"                            userOptOutDate: { type: \"string\" },\r",
+							"                            userMeta: { type: \"string\" },\r",
+							"                        },\r",
+							"                        required: [\r",
+							"                            \"id\",\r",
+							"                            \"userID\",\r",
+							"                            \"userFirstName\",\r",
+							"                            \"userSurname\",\r",
+							"                            \"userEmail\",\r",
+							"                            \"userPassword\",\r",
+							"                            \"userDateOfBirth\",\r",
+							"                            \"userAddressLine1\",\r",
+							"                            \"userAddressLine2\",\r",
+							"                            \"userAddressPostcode\",\r",
+							"                            \"userAddressCountryLocaleID\",\r",
+							"                            \"userDateJoined\",\r",
+							"                            \"userDateUpdated\",\r",
+							"                            \"userRoleID\",\r",
+							"                            \"userGender\",\r",
+							"                            \"userLanguageID\",\r",
+							"                            \"userLastLoggedIn\",\r",
+							"                            \"userAccountApproved\",\r",
+							"                            \"userProcessorCustomerID\",\r",
+							"                            \"userDeleted\",\r",
+							"                            \"userSelfExcluded\",\r",
+							"                            \"userSelfExcludedDate\",\r",
+							"                            \"userSelfExcludedExpiryDate\",\r",
+							"                            \"userPurchaseLimits\",\r",
+							"                            \"userOptInMarketingPFW\",\r",
+							"                            \"userOptInMarketingPartner\",\r",
+							"                            \"userOptOutDate\",\r",
+							"                            \"userMeta\"\r",
+							"                        ]\r",
+							"                    }\r",
+							"                },\r",
+							"                // Additional properties after \"contact\"\r",
+							"                id: { type: \"number\" },\r",
+							"                userID: { type: \"string\" },\r",
+							"                userFirstName: { type: \"string\" },\r",
+							"                userSurname: { type: \"string\" },\r",
+							"                userEmail: { type: \"string\" },\r",
+							"                userPhoneNumber: { type: [\"null\", \"string\"] },\r",
+							"                userPassword: { type: \"string\" },\r",
+							"                userPasswordSalt: { type: [\"null\", \"string\"] },\r",
+							"                userDateOfBirth: { type: \"string\" },\r",
+							"                userAddressLine1: { type: \"string\" },\r",
+							"                userAddressLine2: { type: \"string\" },\r",
+							"                userAddressPostcode: { type: \"string\" },\r",
+							"                userAddressCountryLocaleID: { type: \"number\" },\r",
+							"                userDateJoined: { type: \"string\" },\r",
+							"                userDateUpdated: { type: \"string\" },\r",
+							"                userRoleID: { type: \"number\" },\r",
+							"                userGender: { type: \"number\" },\r",
+							"                userLanguageID: { type: \"number\" },\r",
+							"                userLastLoggedIn: { type: \"string\" },\r",
+							"                userAccountApproved: { type: \"number\" },\r",
+							"                userProcessorCustomerID: { type: [\"null\", \"string\"] },\r",
+							"                userDeleted: { type: \"number\" },\r",
+							"                userDeletedDate: { type: [\"null\", \"string\"] },\r",
+							"                userSelfExcluded: { type: \"number\" },\r",
+							"                userSelfExcludedDate: { type: \"string\" },\r",
+							"                userSelfExcludedExpiryDate: { type: \"string\" },\r",
+							"                userPurchaseLimits: { type: \"number\" },\r",
+							"                userOptInMarketingPFW: { type: \"number\" },\r",
+							"                userOptInMarketingPartner: { type: \"number\" },\r",
+							"                userOptOutDate: { type: \"string\" },\r",
+							"                userMeta: { type: \"string\" },\r",
+							"            },\r",
+							"            required: [\"contact\", \"id\", \"userEmail\"], // \"contact\" and \"id\" are required\r",
+							"        },\r",
+							"    },\r",
+							"    required: [\"status\", \"error\", \"content\"],\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Status code is 200 OK\", ()=>{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Contact array should have a length of 1 since UserID is unique for each user\", function () {\r",
+							"    pm.expect(pm.response.json().content.contact.length).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"// Validate the response against the schema\r",
+							"pm.test(\"Response should match the schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Email should not be null or empty\", function () {\r",
+							"    const email = pm.response.json().content.userEmail;\r",
+							"    pm.expect(email).to.not.be.null;\r",
+							"    pm.expect(email).to.not.be.empty;\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/4617acd4-c9d7-4d8d-94a0-b7582ffd5437/data",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4617acd4-c9d7-4d8d-94a0-b7582ffd5437",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserDataBySiteID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"// Define the expected schema\r",
+							"const schema = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"object\",\r",
+							"            properties: {\r",
+							"                contact: {\r",
+							"                    type: \"array\",\r",
+							"                    items: {\r",
+							"                        type: \"object\",\r",
+							"                        properties: {\r",
+							"                            id: { type: \"number\" },\r",
+							"                            userID: { type: \"string\" },\r",
+							"                            userFirstName: { type: \"string\" },\r",
+							"                            userSurname: { type: \"string\" },\r",
+							"                            userEmail: { type: \"string\" },\r",
+							"                            userPhoneNumber: { type: [\"null\", \"string\"] },\r",
+							"                            userPassword: { type: \"string\" },\r",
+							"                            userPasswordSalt: { type: [\"null\", \"string\"] },\r",
+							"                            userDateOfBirth: { type: \"string\" },\r",
+							"                            userAddressLine1: { type: \"string\" },\r",
+							"                            userAddressLine2: { type: \"string\" },\r",
+							"                            userAddressPostcode: { type: \"string\" },\r",
+							"                            userAddressCountryLocaleID: { type: \"number\" },\r",
+							"                            userDateJoined: { type: \"string\" },\r",
+							"                            userDateUpdated: { type: \"string\" },\r",
+							"                            userRoleID: { type: \"number\" },\r",
+							"                            userGender: { type: \"number\" },\r",
+							"                            userLanguageID: { type: \"number\" },\r",
+							"                            userLastLoggedIn: { type: \"string\" },\r",
+							"                            userAccountApproved: { type: \"number\" },\r",
+							"                            userProcessorCustomerID: { type: [\"null\", \"string\"] },\r",
+							"                            userDeleted: { type: \"number\" },\r",
+							"                            userDeletedDate: { type: [\"null\", \"string\"] },\r",
+							"                            userSelfExcluded: { type: \"number\" },\r",
+							"                            userSelfExcludedDate: { type: \"string\" },\r",
+							"                            userSelfExcludedExpiryDate: { type: \"string\" },\r",
+							"                            userPurchaseLimits: { type: \"number\" },\r",
+							"                            userOptInMarketingPFW: { type: \"number\" },\r",
+							"                            userOptInMarketingPartner: { type: \"number\" },\r",
+							"                            userOptOutDate: { type: \"string\" },\r",
+							"                            userMeta: { type: \"string\" },\r",
+							"                        },\r",
+							"                        required: [\r",
+							"                            \"id\",\r",
+							"                            \"userID\",\r",
+							"                            \"userFirstName\",\r",
+							"                            \"userSurname\",\r",
+							"                            \"userEmail\",\r",
+							"                            \"userPassword\",\r",
+							"                            \"userDateOfBirth\",\r",
+							"                            \"userAddressLine1\",\r",
+							"                            \"userAddressLine2\",\r",
+							"                            \"userAddressPostcode\",\r",
+							"                            \"userAddressCountryLocaleID\",\r",
+							"                            \"userDateJoined\",\r",
+							"                            \"userDateUpdated\",\r",
+							"                            \"userRoleID\",\r",
+							"                            \"userGender\",\r",
+							"                            \"userLanguageID\",\r",
+							"                            \"userLastLoggedIn\",\r",
+							"                            \"userAccountApproved\",\r",
+							"                            \"userProcessorCustomerID\",\r",
+							"                            \"userDeleted\",\r",
+							"                            \"userSelfExcluded\",\r",
+							"                            \"userSelfExcludedDate\",\r",
+							"                            \"userSelfExcludedExpiryDate\",\r",
+							"                            \"userPurchaseLimits\",\r",
+							"                            \"userOptInMarketingPFW\",\r",
+							"                            \"userOptInMarketingPartner\",\r",
+							"                            \"userOptOutDate\",\r",
+							"                            \"userMeta\"\r",
+							"                        ]\r",
+							"                    }\r",
+							"                },\r",
+							"                // Additional properties after \"contact\"\r",
+							"                id: { type: \"number\" },\r",
+							"                userID: { type: \"string\" },\r",
+							"                userFirstName: { type: \"string\" },\r",
+							"                userSurname: { type: \"string\" },\r",
+							"                userEmail: { type: \"string\" },\r",
+							"                userPhoneNumber: { type: [\"null\", \"string\"] },\r",
+							"                userPassword: { type: \"string\" },\r",
+							"                userPasswordSalt: { type: [\"null\", \"string\"] },\r",
+							"                userDateOfBirth: { type: \"string\" },\r",
+							"                userAddressLine1: { type: \"string\" },\r",
+							"                userAddressLine2: { type: \"string\" },\r",
+							"                userAddressPostcode: { type: \"string\" },\r",
+							"                userAddressCountryLocaleID: { type: \"number\" },\r",
+							"                userDateJoined: { type: \"string\" },\r",
+							"                userDateUpdated: { type: \"string\" },\r",
+							"                userRoleID: { type: \"number\" },\r",
+							"                userGender: { type: \"number\" },\r",
+							"                userLanguageID: { type: \"number\" },\r",
+							"                userLastLoggedIn: { type: \"string\" },\r",
+							"                userAccountApproved: { type: \"number\" },\r",
+							"                userProcessorCustomerID: { type: [\"null\", \"string\"] },\r",
+							"                userDeleted: { type: \"number\" },\r",
+							"                userDeletedDate: { type: [\"null\", \"string\"] },\r",
+							"                userSelfExcluded: { type: \"number\" },\r",
+							"                userSelfExcludedDate: { type: \"string\" },\r",
+							"                userSelfExcludedExpiryDate: { type: \"string\" },\r",
+							"                userPurchaseLimits: { type: \"number\" },\r",
+							"                userOptInMarketingPFW: { type: \"number\" },\r",
+							"                userOptInMarketingPartner: { type: \"number\" },\r",
+							"                userOptOutDate: { type: \"string\" },\r",
+							"                userMeta: { type: \"string\" },\r",
+							"            },\r",
+							"            required: [\"contact\", \"id\", \"userEmail\"], // \"contact\" and \"id\" are required\r",
+							"        },\r",
+							"    },\r",
+							"    required: [\"status\", \"error\", \"content\"],\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Status code is 200 OK\", ()=>{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Contact array should have a length of 1 since UserID is unique for each user\", function () {\r",
+							"    pm.expect(pm.response.json().content.contact.length).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"// Validate the response against the schema\r",
+							"pm.test(\"Response should match the schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Email should not be null or empty\", function () {\r",
+							"    const email = pm.response.json().content.userEmail;\r",
+							"    pm.expect(email).to.not.be.null;\r",
+							"    pm.expect(email).to.not.be.empty;\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/4617acd4-c9d7-4d8d-94a0-b7582ffd5437/data",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"4617acd4-c9d7-4d8d-94a0-b7582ffd5437",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get JSON Content",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/content/json/cc3fe2cf-7f96-4a15-bfb6-0bf13c448b2e",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"content",
+						"json",
+						"cc3fe2cf-7f96-4a15-bfb6-0bf13c448b2e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const TRANSACTION_SCHEMA = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"array\",\r",
+							"            items: {\r",
+							"                type: \"object\",\r",
+							"                properties: {\r",
+							"                    id: { type: \"number\" },\r",
+							"                    transactionID: { type: \"string\" },\r",
+							"                    transactionWalletID: { type: [\"null\", \"string\"] },\r",
+							"                    transactionUserID: { type: \"string\" },\r",
+							"                    transactionSiteID: { type: \"string\" },\r",
+							"                    transactionCurrencyID: { type: \"number\" },\r",
+							"                    transactionLocaleID: { type: \"number\" },\r",
+							"                    transactionAmount: { type: \"number\" },\r",
+							"                    transactionAmountRefunded: { type: \"number\" },\r",
+							"                    transactionTypeID: { type: \"number\" },\r",
+							"                    transactionDrawEntriesID: { type: \"string\" },\r",
+							"                    transactionStatus: { type: \"number\" },\r",
+							"                    transactionPaymentProcessor: { type: \"string\" },\r",
+							"                    transactionProcessorID: { type: [\"null\", \"string\"] },\r",
+							"                    transactionDateTime: { type: \"string\" }, // Make sure this is in ISO 8601 format\r",
+							"                    transactionDiscountCode: { type: [\"null\", \"string\"] },\r",
+							"                    transactionItems: { type: \"string\" } // This seems to be a JSON string, you may need to parse it separately\r",
+							"                },\r",
+							"                required: [\r",
+							"                    \"id\", \"transactionID\", \"transactionUserID\", \"transactionSiteID\",\r",
+							"                    \"transactionCurrencyID\", \"transactionLocaleID\", \"transactionAmount\",\r",
+							"                    \"transactionAmountRefunded\", \"transactionTypeID\", \"transactionDrawEntriesID\",\r",
+							"                    \"transactionStatus\", \"transactionPaymentProcessor\", \"transactionDateTime\",\r",
+							"                    \"transactionItems\"\r",
+							"                ]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    required: [\"status\", \"content\"]\r",
+							"};\r",
+							"// Test Case 1: Status Code is 200 OK\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response Body is not Empty\r",
+							"pm.test(\"Response body is not empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Status is True\r",
+							"pm.test(\"Status is true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 4: Content is an Array\r",
+							"pm.test(\"Content is an array\", function () {\r",
+							"    pm.expect(pm.response.json().content).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"// Test Case 5: Each Object in Content Array Matches Schema\r",
+							"const contentArray = pm.response.json().content;\r",
+							"contentArray.forEach(function (item, index) {\r",
+							"    pm.test(`Item ${index + 1} matches schema`, function () {\r",
+							"        pm.expect(item).to.have.keys([\r",
+							"            \"id\", \"transactionID\", \"transactionWalletID\", \"transactionUserID\",\r",
+							"            \"transactionSiteID\", \"transactionCurrencyID\", \"transactionLocaleID\",\r",
+							"            \"transactionAmount\", \"transactionAmountRefunded\", \"transactionTypeID\",\r",
+							"            \"transactionDrawEntriesID\", \"transactionStatus\", \"transactionPaymentProcessor\",\r",
+							"            \"transactionProcessorID\", \"transactionDateTime\", \"transactionDiscountCode\",\r",
+							"            \"transactionItems\"\r",
+							"        ]);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Test Case 6: Check if transactionDateTime is in ISO 8601 format\r",
+							"contentArray.forEach(function (item, index) {\r",
+							"    pm.test(`Item ${index + 1} - transactionDateTime is in ISO format`, function () {\r",
+							"        const dateTimeValue = item.transactionDateTime;\r",
+							"        pm.expect(dateTimeValue).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/);\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Test Case 7: Check if transactionItems can be parsed as JSON\r",
+							"contentArray.forEach(function (item, index) {\r",
+							"    pm.test(`Item ${index + 1} - transactionItems can be parsed as JSON`, function () {\r",
+							"        const itemsValue = item.transactionItems;\r",
+							"        try {\r",
+							"            JSON.parse(itemsValue);\r",
+							"            pm.expect(true).to.be.true; // If parsing succeeds\r",
+							"        } catch (e) {\r",
+							"            pm.expect.fail(`Item ${index + 1} - transactionItems cannot be parsed as JSON`);\r",
+							"        }\r",
+							"    });\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactionUserID\" : \"41d4ba47-f220-4666-af2e-f83b188735ec\",\r\n    \"transactionCurrencyID\" : 7,\r\n    \"transactionLocaleID\" : 8,\r\n    \"transactionTypeID\" : 1,\r\n    \"transactionDiscountCode\" : \"CODE\",\r\n    \"transactionAmount\" : 15.00,\r\n    \"transactionType\" : \"One-Off\",\r\n    \"transactionStatus\" : 1,\r\n    \"transactionPaymentProcessor\": \"Stripe\",\r\n    \"transactionDateTime\" : \"2022-09-21 13:10:02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/transactions/d320e89d-ccb4-4d95-9158-cf0abc22f197",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"d320e89d-ccb4-4d95-9158-cf0abc22f197"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{slug}}/api/v1/draws/5ac3c240-4565-41b0-8399-5cc89d9f8a02",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const DRAW_DATA_SCHEMA = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"object\",\r",
+							"            properties: {\r",
+							"                id: { type: \"number\" },\r",
+							"                drawID: { type: \"string\" },\r",
+							"                drawLocaleID: { type: \"number\" },\r",
+							"                drawName: { type: \"string\" },\r",
+							"                drawHostID: { type: \"string\" },\r",
+							"                drawHostCauseID: { type: \"string\" },\r",
+							"                drawHostTermsAndConditions: { type: \"string\" },\r",
+							"                drawStartDate: { type: \"string\" }, // Make sure this is in ISO 8601 format\r",
+							"                drawEndDate: { type: \"string\" }, // Make sure this is in ISO 8601 format\r",
+							"                drawTicketPrice: { type: \"number\" },\r",
+							"                drawIsActive: { type: \"number\" },\r",
+							"                drawIsVisible: { type: \"number\" },\r",
+							"                drawIsClosed: { type: \"number\" },\r",
+							"                drawAnnounceWinners: { type: \"number\" },\r",
+							"                drawPrizeSplitPercentage: { type: \"number\" },\r",
+							"                drawCauseSplitPercentage: { type: \"number\" },\r",
+							"                drawPFWSplitPercentage: { type: \"number\" },\r",
+							"                drawCategoryID: { type: \"number\" },\r",
+							"                drawTypeID: { type: \"number\" },\r",
+							"                drawPageSlug: { type: \"string\" },\r",
+							"                drawPageURL: { type: \"string\" },\r",
+							"                drawPageTemplate: { type: \"string\" },\r",
+							"                drawOrderPriority: { type: \"number\" },\r",
+							"                drawBrandPrimary: { type: \"string\" },\r",
+							"                drawBrandSecondary: { type: \"string\" },\r",
+							"                drawContent: { type: \"string\" }, // This seems to be a JSON string, you may need to parse it separately\r",
+							"                drawContentID: { type: \"string\" },\r",
+							"                prizes: {\r",
+							"                    type: \"array\",\r",
+							"                    items: {\r",
+							"                        type: \"object\",\r",
+							"                        properties: {\r",
+							"                            id: { type: \"number\" },\r",
+							"                            prizeID: { type: \"string\" },\r",
+							"                            prizeName: { type: \"string\" },\r",
+							"                            prizeTypeID: { type: \"number\" },\r",
+							"                            prizeDescription: { type: \"string\" },\r",
+							"                            prizeValue: { type: \"number\" },\r",
+							"                            prizeSplitPercentage: { type: \"number\" },\r",
+							"                            prizeDrawID: { type: \"string\" },\r",
+							"                            prizeImageURL: { type: \"string\" },\r",
+							"                            prizeQuantity: { type: \"number\" }\r",
+							"                        },\r",
+							"                        required: [\r",
+							"                            \"id\", \"prizeID\", \"prizeName\", \"prizeTypeID\",\r",
+							"                            \"prizeDescription\", \"prizeValue\", \"prizeSplitPercentage\",\r",
+							"                            \"prizeDrawID\", \"prizeImageURL\", \"prizeQuantity\"\r",
+							"                        ]\r",
+							"                    }\r",
+							"                }\r",
+							"            },\r",
+							"            required: [\r",
+							"                \"id\", \"drawID\", \"drawLocaleID\", \"drawName\", \"drawHostID\",\r",
+							"                \"drawHostCauseID\", \"drawHostTermsAndConditions\", \"drawStartDate\",\r",
+							"                \"drawEndDate\", \"drawTicketPrice\", \"drawIsActive\", \"drawIsVisible\",\r",
+							"                \"drawIsClosed\", \"drawAnnounceWinners\", \"drawPrizeSplitPercentage\",\r",
+							"                \"drawCauseSplitPercentage\", \"drawPFWSplitPercentage\", \"drawCategoryID\",\r",
+							"                \"drawTypeID\", \"drawPageSlug\", \"drawPageURL\", \"drawPageTemplate\",\r",
+							"                \"drawOrderPriority\", \"drawBrandPrimary\", \"drawBrandSecondary\", \"drawContent\",\r",
+							"                \"drawContentID\", \"prizes\"\r",
+							"            ]\r",
+							"        }\r",
+							"    },\r",
+							"    required: [\"status\", \"content\"]\r",
+							"};\r",
+							"\r",
+							"// Test Case 1: Status Code is 200 OK\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response Body is not Empty\r",
+							"pm.test(\"Response body is not empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Status is True\r",
+							"pm.test(\"Status is true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 4: Content is an Object\r",
+							"pm.test(\"Content is an object\", function () {\r",
+							"    pm.expect(pm.response.json().content).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Test Case 5: Content has the required keys\r",
+							"pm.test(\"Content has the required keys\", function () {\r",
+							"    const content = pm.response.json().content;\r",
+							"    pm.expect(content).to.include.all.keys(\r",
+							"        \"id\", \"drawID\", \"drawLocaleID\", \"drawName\", \"drawHostID\",\r",
+							"        \"drawHostCauseID\", \"drawHostTermsAndConditions\", \"drawStartDate\",\r",
+							"        \"drawEndDate\", \"drawTicketPrice\", \"drawIsActive\", \"drawIsVisible\",\r",
+							"        \"drawIsClosed\", \"drawAnnounceWinners\", \"drawPrizeSplitPercentage\",\r",
+							"        \"drawCauseSplitPercentage\", \"drawPFWSplitPercentage\", \"drawCategoryID\",\r",
+							"        \"drawTypeID\", \"drawPageSlug\", \"drawPageURL\", \"drawPageTemplate\",\r",
+							"        \"drawOrderPriority\", \"drawBrandPrimary\", \"drawBrandSecondary\", \"drawContent\",\r",
+							"        \"drawContentID\", \"prizes\"\r",
+							"    );\r",
+							"});\r",
+							"\r",
+							"// Test Case 6: Check if drawStartDate and drawEndDate are in ISO 8601 format\r",
+							"pm.test(\"Check if drawStartDate and drawEndDate are in ISO 8601 format\", function () {\r",
+							"    const drawStartDate = pm.response.json().content.drawStartDate;\r",
+							"    const drawEndDate = pm.response.json().content.drawEndDate;\r",
+							"    pm.expect(drawStartDate).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/);\r",
+							"    pm.expect(drawEndDate).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/);\r",
+							"});\r",
+							"\r",
+							"// Test Case 7: Check if prizes is an array and contains at least one prize\r",
+							"pm.test(\"Check if prizes is an array and contains at least one prize\", function () {\r",
+							"    const prizes = pm.response.json().content.prizes;\r",
+							"    pm.expect(prizes).to.be.an('array');\r",
+							"    pm.expect(prizes.length).to.be.at.least(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/f3f9c535-1408-45ab-b26b-22b0a088e187",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"f3f9c535-1408-45ab-b26b-22b0a088e187"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ConnectionToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Access-Token0",
+						"value": "NTJlMGY4YjlhOTNiZmUxNDFhOWJkMDEzOWRmYWIzMmRmZWIxYzQ0ODI0ZjQ0NmZkNjE5MDA2ZTliOTMyOWEyZDNkNDIyOTYwZGZjM2JlYThjZWY3OWQwZDI2MzdmZjZmMTkxMGY0ZGI5ZDYwYmE5ZTRhYjg3ODZmNzRkNTMzNGY=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{slug}}/connection_token",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"connection_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDrawByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/1e379fe7-230b-4c49-9846-061859af99b5",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"1e379fe7-230b-4c49-9846-061859af99b5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDrawEntriesByDrawID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"array\",\r",
+							"            items: {\r",
+							"                type: \"object\",\r",
+							"                properties: {\r",
+							"                    id: { type: \"number\" },\r",
+							"                    drawID: { type: \"string\" },\r",
+							"                    drawEntryID: { type: \"string\" },\r",
+							"                    drawEntryUserID: { type: \"string\" },\r",
+							"                    drawEntries: { type: \"number\" },\r",
+							"                    drawEntryPrice: { type: \"number\" },\r",
+							"                    drawEntryTotal: { type: [\"number\", \"null\"] },\r",
+							"                    drawCauseID: { type: \"string\" },\r",
+							"                    drawEntryValidToDate: { type: \"string\", format: \"date-time\" },\r",
+							"                    drawEntryType: { type: \"string\" },\r",
+							"                    drawCategoryID: { type: \"number\" }\r",
+							"                },\r",
+							"                required: [\r",
+							"                    \"id\",\r",
+							"                    \"drawID\",\r",
+							"                    \"drawEntryID\",\r",
+							"                    \"drawEntryUserID\",\r",
+							"                    \"drawEntries\",\r",
+							"                    \"drawEntryPrice\",\r",
+							"                    \"drawCauseID\",\r",
+							"                    \"drawEntryValidToDate\",\r",
+							"                    \"drawEntryType\",\r",
+							"                    \"drawCategoryID\"\r",
+							"                ]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    required: [\"status\", \"error\"]\r",
+							"};\r",
+							"\r",
+							"pm.test(\"Status code is 200 OK\", ()=>{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Validate the response against the schema\r",
+							"pm.test(\"Response should match the schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/2e77b93a-a86a-4554-bdd3-fff96b76d350/entries",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"2e77b93a-a86a-4554-bdd3-fff96b76d350",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prize ByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contentSiteID\": 1,\r\n    \"contentPrimaryKey\": \"a0a2a95e-a287-4fa6-b778-07c034d661a0\",\r\n    \"contentLanguageID\": 8,\r\n    \"contentType\": 1,\r\n    \"contentDateCreated\": \"2022-09-01 00:00:00\",\r\n    \"contentDateModified\": \"2022-09-01 00:00:00\",\r\n    \"contentPublished\": 0,\r\n    \"contentDeleted\": 0,\r\n    \"contentDeletedDate\": null,\r\n    \"contentBody\": \"I AM STILL IN DANGER!\",\r\n    \"contentMeta\": {\r\n        \"contentTags\": \"I am Metadata\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/prizes/e322a441-2790-42e9-aa9a-4e2c66c667d3",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"prizes",
+						"e322a441-2790-42e9-aa9a-4e2c66c667d3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Draw Entries",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/2a5151d6-8048-47c0-b4f9-c70b80b34635/entries",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"2a5151d6-8048-47c0-b4f9-c70b80b34635",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Draw Prizes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/78ef1f4c-b2a6-477f-b869-ad4df19d2c67/prizes",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"78ef1f4c-b2a6-477f-b869-ad4df19d2c67",
+						"prizes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Draw Winners By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"array\",\r",
+							"            items: {\r",
+							"                type: \"object\",\r",
+							"                properties: {\r",
+							"                    drawID: { type: \"string\" },\r",
+							"                    drawUserID: { type: \"string\" },\r",
+							"                    drawUserFirstName: { type: \"string\" },\r",
+							"                    drawUserSurname: { type: \"string\" },\r",
+							"                    drawUserDisplayName: { type: \"string\" },\r",
+							"                    drawUserEmail: { type: \"string\", format: \"email\" },\r",
+							"                    drawPrizeID: { type: \"string\" },\r",
+							"                    drawPrizeName: { type: \"string\" },\r",
+							"                    drawPrizeWonDate: { type: \"string\", format: \"date-time\" },\r",
+							"                    drawPrizeClaimedDate: { type: [\"string\", \"null\"], format: \"date-time\" }\r",
+							"                },\r",
+							"                required: [\r",
+							"                    \"drawID\",\r",
+							"                    \"drawUserID\",\r",
+							"                    \"drawUserFirstName\",\r",
+							"                    \"drawUserSurname\",\r",
+							"                    \"drawUserDisplayName\",\r",
+							"                    \"drawUserEmail\",\r",
+							"                    \"drawPrizeID\",\r",
+							"                    \"drawPrizeName\",\r",
+							"                    \"drawPrizeWonDate\",\r",
+							"                    \"drawPrizeClaimedDate\"\r",
+							"                ]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    required: [\"status\", \"error\"]\r",
+							"};\r",
+							"// Test Case 1: Status Code is 200 OK\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of boolean type\r",
+							"pm.test(\"Response has a boolean 'status' field\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.jsonBody('status', true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has an 'error' field which is either null or a string\r",
+							"pm.test(\"Error field is null or a string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.jsonBody('error');\r",
+							"    pm.expect(pm.response.json().error).to.satisfy(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Test Case 4: Response has a 'content' field which is an array\r",
+							"pm.test(\"Response has a 'content' field which is an array\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('content').that.is.an('array');\r",
+							"});\r",
+							"// Test Case 5: Each item in 'content' array matches the schema\r",
+							"pm.test(\"Response matches the expected schema\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/f3f9c535-1408-45ab-b26b-22b0a088e187/winners",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"f3f9c535-1408-45ab-b26b-22b0a088e187",
+						"winners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Draws to Close",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/get/toClose",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"get",
+						"toClose"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Draws to Open",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/get/toOpen",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"get",
+						"toOpen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Site Draws",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/get/toOpen",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"get",
+						"toOpen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Site Draws",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"siteName\" : \"Play Fund Win\", \r\n    \"siteURL\" : \"playfundwin.com\", \r\n    \"siteTypeID\" : 1, \r\n    \"siteDescription\" : \"The Worlds Best Prize Draw Site. BAR NONE!\", \r\n    \"siteDrawTypeID\" : 3 \r\n}"
+				},
+				"url": {
+					"raw": "{{slug}}/api/v1/sites/2cf8d2b9-6907-48e5-a8ce-bdbba4771750/draws",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"sites",
+						"2cf8d2b9-6907-48e5-a8ce-bdbba4771750",
+						"draws"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/testEmail",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"testEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVisibleDraws",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const drawSchema ={\r",
+							"    \"type\": \"object\",\r",
+							"    \"properties\": {\r",
+							"        \"status\": { \"type\": \"boolean\" },\r",
+							"        \"error\": { \"type\": [\"null\", \"string\"] },\r",
+							"        \"content\": {\r",
+							"            \"type\": \"array\",\r",
+							"            \"items\": {\r",
+							"                \"type\": \"object\",\r",
+							"                \"properties\": {\r",
+							"                    \"id\": { \"type\": \"number\" },\r",
+							"                    \"drawID\": { \"type\": \"string\", \"format\": \"uuid\" },\r",
+							"                    \"drawLocaleID\": { \"type\": \"number\" },\r",
+							"                    \"drawName\": { \"type\": \"string\" },\r",
+							"                    \"drawHostID\": { \"type\": \"string\", \"format\": \"uuid\" },\r",
+							"                    \"drawHostCauseID\": { \"type\": \"string\", \"format\": \"uuid\" },\r",
+							"                    \"drawHostTermsAndConditions\": { \"type\": \"string\" },\r",
+							"                    \"drawStartDate\": { \"type\": \"string\", \"format\": \"date-time\" },\r",
+							"                    \"drawEndDate\": { \"type\": \"string\", \"format\": \"date-time\" },\r",
+							"                    \"drawTicketPrice\": { \"type\": \"number\" },\r",
+							"                    \"drawIsActive\": { \"type\": \"number\" },\r",
+							"                    \"drawIsVisible\": { \"type\": \"number\" },\r",
+							"                    \"drawIsClosed\": { \"type\": \"number\" },\r",
+							"                    \"drawAnnounceWinners\": { \"type\": \"number\" },\r",
+							"                    \"drawPrizeSplitPercentage\": { \"type\": [\"null\", \"number\"] },\r",
+							"                    \"drawCauseSplitPercentage\": { \"type\": \"number\" },\r",
+							"                    \"drawPFWSplitPercentage\": { type: [\"number\", \"null\"] },\r",
+							"                    \"drawCategoryID\": { \"type\": \"number\" },\r",
+							"                    \"drawTypeID\": { \"type\": \"number\" },\r",
+							"                    \"drawPageSlug\": { \"type\": [\"null\", \"string\"] },\r",
+							"                    \"drawPageURL\": { \"type\": \"string\" },\r",
+							"                    \"drawPageTemplate\": { \"type\": \"string\" },\r",
+							"                    \"drawOrderPriority\": { \"type\": \"number\" },\r",
+							"                    \"drawBrandPrimary\": { \"type\": \"string\" },\r",
+							"                    \"drawBrandSecondary\": { \"type\": \"string\" },\r",
+							"                    \"drawContent\": { \"type\": \"string\" },\r",
+							"                    \"drawWinners\": { \"type\": \"array\" },\r",
+							"                    \"prizes\": {\r",
+							"                        \"type\": \"array\",\r",
+							"                        \"items\": {\r",
+							"                            \"type\": \"object\",\r",
+							"                            \"properties\": {\r",
+							"                                \"id\": { \"type\": \"number\" },\r",
+							"                                \"prizeID\": { \"type\": \"string\", \"format\": \"uuid\" },\r",
+							"                                \"prizeName\": { \"type\": \"string\" },\r",
+							"                                \"prizeTypeID\": { \"type\": \"number\" },\r",
+							"                                \"prizeDescription\": { \"type\": \"string\" },\r",
+							"                                \"prizeValue\": { \"type\": \"number\" },\r",
+							"                                \"prizeSplitPercentage\": { \"type\": \"number\" },\r",
+							"                                \"prizeDrawID\": { \"type\": \"string\", \"format\": \"uuid\" },\r",
+							"                                \"prizeImageURL\": { \"type\": \"string\", \"format\": \"uri\" },\r",
+							"                                \"prizeQuantity\": { \"type\": \"number\" }\r",
+							"                            },\r",
+							"                            \"required\": [\"id\", \"prizeID\", \"prizeName\", \"prizeTypeID\", \"prizeDescription\", \"prizeValue\", \"prizeSplitPercentage\", \"prizeDrawID\", \"prizeImageURL\", \"prizeQuantity\"]\r",
+							"                        }\r",
+							"                    }\r",
+							"                },\r",
+							"                \"required\": [\r",
+							"                    \"id\",\r",
+							"                    \"drawID\",\r",
+							"                    \"drawLocaleID\",\r",
+							"                    \"drawName\",\r",
+							"                    \"drawHostID\",\r",
+							"                    \"drawHostCauseID\",\r",
+							"                    \"drawHostTermsAndConditions\",\r",
+							"                    \"drawStartDate\",\r",
+							"                    \"drawEndDate\",\r",
+							"                    \"drawTicketPrice\",\r",
+							"                    \"drawIsActive\",\r",
+							"                    \"drawIsVisible\",\r",
+							"                    \"drawIsClosed\",\r",
+							"                    \"drawAnnounceWinners\",\r",
+							"                    \"drawPrizeSplitPercentage\",\r",
+							"                    \"drawCauseSplitPercentage\",\r",
+							"                    \"drawPFWSplitPercentage\",\r",
+							"                    \"drawCategoryID\",\r",
+							"                    \"drawTypeID\",\r",
+							"                    \"drawPageSlug\",\r",
+							"                    \"drawPageURL\",\r",
+							"                    \"drawPageTemplate\",\r",
+							"                    \"drawOrderPriority\",\r",
+							"                    \"drawBrandPrimary\",\r",
+							"                    \"drawBrandSecondary\",\r",
+							"                    \"drawContent\",\r",
+							"                    \"drawWinners\",\r",
+							"                    \"prizes\"\r",
+							"                ]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    \"required\": [\"status\", \"error\", \"content\"]\r",
+							"}\r",
+							"// Test Case 1: Status Code is 200 OK\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of type boolean\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has a 'error' field of type string or null\r",
+							"pm.test(\"Response has a 'error' field of type null or string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('error').that.satisfies(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"// Test Case 4: Response has a 'content' field which is an array\r",
+							"pm.test(\"Response has a 'content' field which is an array\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json().content).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"// Test Case 5: Each object in 'content' array has the expected properties and data types\r",
+							"pm.test(\"Response should match the user data schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(drawSchema);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Test Case 6: Each draw has at least one prize\r",
+							"pm.test(\"Each draw has at least one prize\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.json().content.forEach(function (draw) {\r",
+							"        pm.expect(draw.prizes).to.be.an('array');\r",
+							"        pm.expect(draw.prizes).to.have.length.above(0);\r",
+							"    });\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/get/visible?limit=15",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"get",
+						"visible"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visible Draw for Slider",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Schema for the response\r",
+							"const drawSchema  = {\r",
+							"    type: \"object\",\r",
+							"    properties: {\r",
+							"        status: { type: \"boolean\" },\r",
+							"        error: { type: [\"null\", \"string\"] },\r",
+							"        content: {\r",
+							"            type: \"array\",\r",
+							"            items: {\r",
+							"                type: \"object\",\r",
+							"                properties: {\r",
+							"                    id: { type: \"number\" },\r",
+							"                    drawID: { type: \"string\" },\r",
+							"                    drawLocaleID: { type: \"number\" },\r",
+							"                    drawName: { type: \"string\" },\r",
+							"                    drawHostID: { type: \"string\" },\r",
+							"                    drawHostCauseID: { type: \"string\" },\r",
+							"                    drawHostTermsAndConditions: { type: \"string\" },\r",
+							"                    drawStartDate: { type: \"string\" }, // Assuming it's a string in ISO 8601 format\r",
+							"                    drawEndDate: { type: \"string\" }, // Assuming it's a string in ISO 8601 format\r",
+							"                    drawTicketPrice: { type: \"number\" },\r",
+							"                    drawIsActive: { type: \"number\" },\r",
+							"                    drawIsVisible: { type: \"number\" },\r",
+							"                    drawIsClosed: { type: \"number\" },\r",
+							"                    drawAnnounceWinners: { type: \"number\" },\r",
+							"                    drawPrizeSplitPercentage: { type: [\"number\", \"null\"] },\r",
+							"                    drawCauseSplitPercentage: { type: \"number\" },\r",
+							"                    drawPFWSplitPercentage: { type: [\"number\", \"null\"] },\r",
+							"                    drawCategoryID: { type: \"number\" },\r",
+							"                    drawTypeID: { type: \"number\" },\r",
+							"                    drawPageSlug: { type: [\"string\", \"null\"] },\r",
+							"                    drawPageURL: { type: \"string\" },\r",
+							"                    drawPageTemplate: { type: \"string\" },\r",
+							"                    drawOrderPriority: { type: \"number\" },\r",
+							"                    drawBrandPrimary: { type: \"string\" },\r",
+							"                    drawBrandSecondary: { type: \"string\" },\r",
+							"                    drawContent: { type: \"string\" },\r",
+							"                    // Add other properties here...\r",
+							"                    drawWinners: { type: \"array\" },\r",
+							"                    prizes: {\r",
+							"                        type: \"array\",\r",
+							"                        items: {\r",
+							"                            type: \"object\",\r",
+							"                            properties: {\r",
+							"                                id: { type: \"number\" },\r",
+							"                                prizeID: { type: \"string\" },\r",
+							"                                prizeName: { type: \"string\" },\r",
+							"                                prizeTypeID: { type: \"number\" },\r",
+							"                                prizeDescription: { type: \"string\" },\r",
+							"                                prizeValue: { type: \"number\" },\r",
+							"                                prizeSplitPercentage: { type: \"number\" },\r",
+							"                                prizeDrawID: { type: \"string\" },\r",
+							"                                prizeImageURL: { type: \"string\" },\r",
+							"                                prizeQuantity: { type: \"number\" }\r",
+							"                            },\r",
+							"                            required: [\r",
+							"                                \"id\",\r",
+							"                                \"prizeID\",\r",
+							"                                \"prizeName\",\r",
+							"                                \"prizeTypeID\",\r",
+							"                                \"prizeDescription\",\r",
+							"                                \"prizeValue\",\r",
+							"                                \"prizeSplitPercentage\",\r",
+							"                                \"prizeDrawID\",\r",
+							"                                \"prizeImageURL\",\r",
+							"                                \"prizeQuantity\"\r",
+							"                            ]\r",
+							"                        }\r",
+							"                    }\r",
+							"                },\r",
+							"                required: [\r",
+							"                    \"id\",\r",
+							"                    \"drawID\",\r",
+							"                    \"drawLocaleID\",\r",
+							"                    \"drawName\",\r",
+							"                    \"drawHostID\",\r",
+							"                    \"drawHostCauseID\",\r",
+							"                    \"drawHostTermsAndConditions\",\r",
+							"                    \"drawStartDate\",\r",
+							"                    \"drawEndDate\",\r",
+							"                    \"drawTicketPrice\",\r",
+							"                    \"drawIsActive\",\r",
+							"                    \"drawIsVisible\",\r",
+							"                    \"drawIsClosed\",\r",
+							"                    \"drawAnnounceWinners\",\r",
+							"                    \"drawPrizeSplitPercentage\",\r",
+							"                    \"drawCauseSplitPercentage\",\r",
+							"                    \"drawPFWSplitPercentage\",\r",
+							"                    \"drawCategoryID\",\r",
+							"                    \"drawTypeID\",\r",
+							"                    \"drawPageSlug\",\r",
+							"                    \"drawPageURL\",\r",
+							"                    \"drawPageTemplate\",\r",
+							"                    \"drawOrderPriority\",\r",
+							"                    \"drawBrandPrimary\",\r",
+							"                    \"drawBrandSecondary\",\r",
+							"                    \"drawContent\",\r",
+							"                    \"drawWinners\",\r",
+							"                    \"prizes\"\r",
+							"                ]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    required: [\"status\", \"error\"]\r",
+							"};\r",
+							"\r",
+							"// Test Case 1: Check if the response has a status code of 200 (OK)\r",
+							"pm.test(\"Status code is 200 (OK)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of type boolean\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has a 'error' field of type string or null\r",
+							"pm.test(\"Response has a 'error' field of type null or string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('error').that.satisfies(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Test Case 4: Response has a 'content' field which is an array\r",
+							"// Test Case 4: Response has a 'content' field which is an array\r",
+							"pm.test(\"Response has a 'content' field which is an array\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json().content).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Test Case 5: Each object in 'content' array has the expected properties and data types\r",
+							"pm.test(\"Response should match the user data schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(drawSchema);\r",
+							"});\r",
+							"// Test Case 6: Each draw has at least one prize\r",
+							"pm.test(\"Each draw has at least one prize\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.json().content.forEach(function (draw) {\r",
+							"        pm.expect(draw.prizes).to.be.an('array');\r",
+							"        pm.expect(draw.prizes).to.have.length.above(0);\r",
+							"    });\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/draws/get/visible?isHeroSlider=true",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"draws",
+						"get",
+						"visible"
+					],
+					"query": [
+						{
+							"key": "isHeroSlider",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPost",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const postSchema = {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"status\": { \"type\": \"boolean\" },\r",
+							"    \"error\": { \"type\": [\"null\", \"object\"] },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"array\",\r",
+							"      \"items\": {\r",
+							"        \"type\": \"object\",\r",
+							"        \"properties\": {\r",
+							"          \"id\": { \"type\": \"number\" },\r",
+							"          \"postID\": { \"type\": \"string\" },\r",
+							"          \"postName\": { \"type\": \"string\" },\r",
+							"          \"postUserID\": { \"type\": \"string\" },\r",
+							"          \"postCategoryID\": { \"type\": [\"string\", \"null\"] },\r",
+							"          \"postIsActive\": { \"type\": \"number\", \"enum\": [0, 1] },\r",
+							"          \"postCreatedDate\": { \"type\": \"string\", \"format\": \"date-time\" },\r",
+							"           \"postUpdatedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"          \"postUpdatedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"          \"postDeletedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"          \"postDeleted\": { \"type\": \"number\" },\r",
+							"          \"postSlug\": { \"type\": \"string\" },\r",
+							"          \"postMeta\": { \"type\": \"string\" },\r",
+							"          \"userFirstName\": { \"type\": \"string\" },\r",
+							"          \"userSurname\": { \"type\": \"string\" },\r",
+							"          \"taxonomy\": { \"type\": \"array\" }\r",
+							"        },\r",
+							"        \"required\": [\r",
+							"          \"id\",\r",
+							"          \"postID\",\r",
+							"          \"postName\",\r",
+							"          \"postUserID\",\r",
+							"          \"postIsActive\",\r",
+							"          \"postCreatedDate\",\r",
+							"          \"postPublishedDate\",\r",
+							"          \"postDeletedDate\",\r",
+							"          \"postDeleted\",\r",
+							"          \"postSlug\",\r",
+							"          \"postMeta\",\r",
+							"          \"userFirstName\",\r",
+							"          \"userSurname\",\r",
+							"          \"taxonomy\"\r",
+							"        ]\r",
+							"      }\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\"status\", \"error\", \"content\"]\r",
+							"}\r",
+							"\r",
+							"// Test Case 1: Check if the response has a status code of 200 (OK)\r",
+							"pm.test(\"Status code is 200 (OK)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of type boolean\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has a 'error' field of type string or null\r",
+							"pm.test(\"Response has a 'error' field of type null or string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('error').that.satisfies(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"// Test Case 4: Response has a 'content' field which is an array\r",
+							"// Test Case 4: Response has a 'content' field which is an array\r",
+							"pm.test(\"Response has a 'content' field which is an array\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json().content).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"// Test Case 5: Each object in 'content' array has the expected properties and data types\r",
+							"pm.test(\"Response should match the user data schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(postSchema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/posts",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postDetail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const postSchema =  {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"status\": { \"type\": \"boolean\" },\r",
+							"    \"error\": { \"type\": [\"null\", \"string\"] },\r",
+							"    \"content\": {\r",
+							"      \"type\": \"object\",\r",
+							"      \"properties\": {\r",
+							"        \"id\": { \"type\": \"integer\" },\r",
+							"        \"postID\": { \"type\": \"string\" },\r",
+							"        \"postName\": { \"type\": \"string\" },\r",
+							"        \"postUserID\": { \"type\": \"string\" },\r",
+							"        \"postCategoryID\": { \"type\": [\"string\", \"null\"] },\r",
+							"        \"postIsActive\": { \"type\": \"integer\" },\r",
+							"        \"postCreatedDate\": { \"type\": \"string\", \"format\": \"date-time\" },\r",
+							"        \"postPublishedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"        \"postUpdatedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"        \"postDeletedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"        \"postDeleted\": { \"type\": \"integer\" },\r",
+							"        \"postSlug\": { \"type\": \"string\" },\r",
+							"        \"postMeta\": { \"type\": \"string\" },\r",
+							"        \"userFirstName\": { \"type\": \"string\" },\r",
+							"        \"userSurname\": { \"type\": \"string\" },\r",
+							"        \"userMeta\": { \"type\": \"string\" },\r",
+							"        \"profileImage\": { \"type\": \"string\" },\r",
+							"        \"authorLink\": { \"type\": \"string\" },\r",
+							"        \"taxonomy\": { \"type\": \"array\" }\r",
+							"      },\r",
+							"      \"required\": [\"id\", \"postID\", \"postName\", \"postUserID\", \"postIsActive\", \"postCreatedDate\", \"postDeleted\", \"postSlug\", \"postMeta\", \"userFirstName\", \"userSurname\", \"userMeta\", \"profileImage\", \"authorLink\", \"taxonomy\"]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\"status\", \"error\", \"content\"]\r",
+							"}\r",
+							"\r",
+							"\r",
+							"// Test Case 1: Check if the response has a status code of 200 (OK)\r",
+							"pm.test(\"Status code is 200 (OK)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of type boolean\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has a 'error' field of type string or null\r",
+							"pm.test(\"Response has a 'error' field of type null or string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('error').that.satisfies(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Test Case 4: Response has a 'content' field which is an object\r",
+							"pm.test(\"Response has a 'content' field which is an array\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json().content).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Test Case 5: Each object in 'content' array has the expected properties and data types\r",
+							"pm.test(\"Response should match the user data schema\", function () {\r",
+							"    pm.expect(pm.response.json()).to.have.jsonSchema(postSchema);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check if postMeta is parseable as JSON\", function() {\r",
+							"    const postMetaString = pm.response.json().content.postMeta;\r",
+							"    let parsedPostMeta;\r",
+							"\r",
+							"    try {\r",
+							"        parsedPostMeta = JSON.parse(postMetaString);\r",
+							"    } catch (error) {\r",
+							"        pm.expect.fail(`postMeta is not parseable as JSON. Error: ${error.message}`);\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(parsedPostMeta).to.not.be.undefined;\r",
+							"    pm.expect(parsedPostMeta).to.not.be.null;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/posts/single-post?postID=f1-red-bull-the-winning-machine",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"posts",
+						"single-post"
+					],
+					"query": [
+						{
+							"key": "postID",
+							"value": "f1-red-bull-the-winning-machine"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByPagination",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"    \"type\": \"object\",\r",
+							"    \"properties\": {\r",
+							"        \"status\": { \"type\": \"boolean\" },\r",
+							"        \"error\": { \"type\": \"null\" },\r",
+							"        \"content\": {\r",
+							"            \"type\": \"array\",\r",
+							"            \"items\": {\r",
+							"                \"type\": \"object\",\r",
+							"                \"properties\": {\r",
+							"                    \"userCount\": { \"type\": \"integer\" },\r",
+							"                    \"userData\": {\r",
+							"                        \"type\": \"array\",\r",
+							"                        \"items\": {\r",
+							"                            \"type\": \"object\",\r",
+							"                            \"properties\": {\r",
+							"                                \"id\": { \"type\": \"integer\" },\r",
+							"                                \"userID\": { \"type\": \"string\" },\r",
+							"                                \"userFirstName\": { \"type\": \"string\" },\r",
+							"                                \"userSurname\": { \"type\": \"string\" },\r",
+							"                                \"userEmail\": { \"type\": \"string\", \"format\": \"email\" },\r",
+							"                                \"userPhoneNumber\": { \"type\": [\"string\", \"null\"] },\r",
+							"                                \"userPassword\": { \"type\": \"string\" },\r",
+							"                                \"userPasswordSalt\": { \"type\": \"string\" },\r",
+							"                                \"userDateOfBirth\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userAddressLine1\": { \"type\": \"string\" },\r",
+							"                                \"userAddressLine2\": { \"type\": \"string\" },\r",
+							"                                \"userAddressPostcode\": { \"type\": \"string\" },\r",
+							"                                \"userAddressCountryLocaleID\": { \"type\": \"integer\" },\r",
+							"                                \"userDateJoined\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userDateUpdated\": { \"type\": \"string\", \"format\": \"date-time\" },\r",
+							"                                \"userRoleID\": { \"type\": \"integer\" },\r",
+							"                                \"userGender\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userLanguageID\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userLastLoggedIn\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userAccountApproved\": { \"type\": \"integer\" },\r",
+							"                                \"userProcessorCustomerID\": { \"type\": \"string\" },\r",
+							"                                \"userDeleted\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userDeletedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userSelfExcluded\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userSelfExcludedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userSelfExcludedExpiryDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userPurchaseLimits\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userOptInMarketingPFW\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userOptInMarketingPartner\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userOptOutDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userMeta\": { \"type\": \"string\" },\r",
+							"                                \"totalTransaction\": { \"type\": \"integer\" },\r",
+							"                                \"totalDrawEntries\": { \"type\": \"integer\" },\r",
+							"                                \"totalNumberOfWins\": { \"type\": \"integer\" },\r",
+							"                                \"totalNumberOfCauses\": { \"type\": \"integer\" },\r",
+							"                                \"fundRaised\": { \"type\": \"string\" }\r",
+							"                            },\r",
+							"                            \"required\": [\"id\", \"userID\", \"userFirstName\", \"userSurname\", \"userEmail\", \"userPassword\", \"userPasswordSalt\", \"userAddressLine1\", \"userAddressLine2\", \"userAddressPostcode\", \"userAddressCountryLocaleID\", \"userDateUpdated\", \"userRoleID\", \"userProcessorCustomerID\", \"totalTransaction\", \"totalDrawEntries\", \"totalNumberOfWins\", \"totalNumberOfCauses\", \"fundRaised\"]\r",
+							"                        }\r",
+							"                    }\r",
+							"                },\r",
+							"                \"required\": [\"userCount\", \"userData\"]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    \"required\": [\"status\", \"error\", \"content\"]\r",
+							"};\r",
+							"\r",
+							"pm.test('Response matches schema', function() {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"// Test Case 1: Check if the response has a status code of 200 (OK)\r",
+							"pm.test(\"Status code is 200 (OK)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of type boolean\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has a 'error' field of type string or null\r",
+							"pm.test(\"Response has a 'error' field of type null or string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('error').that.satisfies(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Test Case 4: Response has a 'content' field which is an object\r",
+							"pm.test(\"Response has a 'content' field which is an array of objects\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json().content).to.be.an('array');\r",
+							"    pm.expect(pm.response.json().content[0]).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/all/1/5?sort=desc&sortby=id&search=",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"all",
+						"1",
+						"5"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "desc"
+						},
+						{
+							"key": "sortby",
+							"value": "id"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
