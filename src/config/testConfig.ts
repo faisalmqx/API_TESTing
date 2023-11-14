@@ -2,6 +2,8 @@ import * as newman from 'newman';
 import { ENVIRONMENT } from '../data/globalData';
 import logger from '../support/logger';
 import path from 'path';
+import fs from 'fs';
+
 // collection_file path imported from postman
 const collection_Path = 'src/data/collections/newman-test-sample.postman_collection.json';
 // const collection_Path = 'src/data/collections/PFW_V2_Collection_GET_CALL.postman_collection.json';
@@ -32,6 +34,10 @@ switch(ENVIRONMENT){
 }
 
 const reportsDirectory = path.join(__dirname, '../reports');
+// Check if the reports directory exists, and create it if it doesn't
+if (!fs.existsSync(reportsDirectory)) {
+    fs.mkdirSync(reportsDirectory, { recursive: true });
+}
 // IIFE function will get executed automatically no need to call it explicitly
 (
      () => {
