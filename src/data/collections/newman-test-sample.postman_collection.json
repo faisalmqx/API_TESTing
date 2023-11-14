@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "dad4459b-79b3-41c5-a685-ac6e3784ef00",
+		"name": "newman-test-sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28345038"
+	},
+	"item": [
+		{
+			"name": "getUserByPagination Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const schema = {\r",
+							"    \"type\": \"object\",\r",
+							"    \"properties\": {\r",
+							"        \"status\": { \"type\": \"boolean\" },\r",
+							"        \"error\": { \"type\": \"null\" },\r",
+							"        \"content\": {\r",
+							"            \"type\": \"array\",\r",
+							"            \"items\": {\r",
+							"                \"type\": \"object\",\r",
+							"                \"properties\": {\r",
+							"                    \"userCount\": { \"type\": \"integer\" },\r",
+							"                    \"userData\": {\r",
+							"                        \"type\": \"array\",\r",
+							"                        \"items\": {\r",
+							"                            \"type\": \"object\",\r",
+							"                            \"properties\": {\r",
+							"                                \"id\": { \"type\": \"integer\" },\r",
+							"                                \"userID\": { \"type\": \"string\" },\r",
+							"                                \"userFirstName\": { \"type\": \"string\" },\r",
+							"                                \"userSurname\": { \"type\": \"string\" },\r",
+							"                                \"userEmail\": { \"type\": \"string\", \"format\": \"email\" },\r",
+							"                                \"userPhoneNumber\": { \"type\": [\"string\", \"null\"] },\r",
+							"                                \"userPassword\": { \"type\": \"string\" },\r",
+							"                                \"userPasswordSalt\": { \"type\": \"string\" },\r",
+							"                                \"userDateOfBirth\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userAddressLine1\": { \"type\": \"string\" },\r",
+							"                                \"userAddressLine2\": { \"type\": \"string\" },\r",
+							"                                \"userAddressPostcode\": { \"type\": \"string\" },\r",
+							"                                \"userAddressCountryLocaleID\": { \"type\": \"integer\" },\r",
+							"                                \"userDateJoined\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userDateUpdated\": { \"type\": \"string\", \"format\": \"date-time\" },\r",
+							"                                \"userRoleID\": { \"type\": \"integer\" },\r",
+							"                                \"userGender\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userLanguageID\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userLastLoggedIn\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userAccountApproved\": { \"type\": \"integer\" },\r",
+							"                                \"userProcessorCustomerID\": { \"type\": \"string\" },\r",
+							"                                \"userDeleted\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userDeletedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userSelfExcluded\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userSelfExcludedDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userSelfExcludedExpiryDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userPurchaseLimits\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userOptInMarketingPFW\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userOptInMarketingPartner\": { \"type\": [\"integer\", \"null\"] },\r",
+							"                                \"userOptOutDate\": { \"type\": [\"string\", \"null\"], \"format\": \"date-time\" },\r",
+							"                                \"userMeta\": { \"type\": \"string\" },\r",
+							"                                \"totalTransaction\": { \"type\": \"integer\" },\r",
+							"                                \"totalDrawEntries\": { \"type\": \"integer\" },\r",
+							"                                \"totalNumberOfWins\": { \"type\": \"integer\" },\r",
+							"                                \"totalNumberOfCauses\": { \"type\": \"integer\" },\r",
+							"                                \"fundRaised\": { \"type\": \"string\" }\r",
+							"                            },\r",
+							"                            \"required\": [\"id\", \"userID\", \"userFirstName\", \"userSurname\", \"userEmail\", \"userPassword\", \"userPasswordSalt\", \"userAddressLine1\", \"userAddressLine2\", \"userAddressPostcode\", \"userAddressCountryLocaleID\", \"userDateUpdated\", \"userRoleID\", \"userProcessorCustomerID\", \"totalTransaction\", \"totalDrawEntries\", \"totalNumberOfWins\", \"totalNumberOfCauses\", \"fundRaised\"]\r",
+							"                        }\r",
+							"                    }\r",
+							"                },\r",
+							"                \"required\": [\"userCount\", \"userData\"]\r",
+							"            }\r",
+							"        }\r",
+							"    },\r",
+							"    \"required\": [\"status\", \"error\", \"content\"]\r",
+							"};\r",
+							"\r",
+							"pm.test('Response matches schema', function() {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"// Test Case 1: Check if the response has a status code of 200 (OK)\r",
+							"pm.test(\"Status code is 200 (OK)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test Case 2: Response has a 'status' field of type boolean\r",
+							"pm.test(\"Response status should be true\", function () {\r",
+							"    pm.expect(pm.response.json().status).to.eql(true);\r",
+							"});\r",
+							"\r",
+							"// Test Case 3: Response has a 'error' field of type string or null\r",
+							"pm.test(\"Response has a 'error' field of type null or string\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json()).to.have.property('error').that.satisfies(function (value) {\r",
+							"        return value === null || typeof value === 'string';\r",
+							"    });\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// Test Case 4: Response has a 'content' field which is an object\r",
+							"pm.test(\"Response has a 'content' field which is an array of objects\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.expect(pm.response.json().content).to.be.an('array');\r",
+							"    pm.expect(pm.response.json().content[0]).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{slug}}/api/v1/users/all/1/5?sort=desc&sortby=id&search=",
+					"host": [
+						"{{slug}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"all",
+						"1",
+						"5"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "desc"
+						},
+						{
+							"key": "sortby",
+							"value": "id"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
